@@ -63,18 +63,3 @@ class graph:
         # Call the recursive helper function
         # to print DFS traversal
         self.DFSUtil(v, visited)
-
-
-if __name__ == "__main__":
-    g = graph()
-    nodes = 150
-    seed = random.randint(1,10)
-    probability = 0.1
-    G = g.random_connected_graph(nodes, probability)
-
-    # Draw the graph after DFS traversal
-    nx.draw(G, node_color='lightblue', 
-            with_labels=True, 
-            node_size=500)
-    plt.show()
-    g.DFS(0)
