@@ -15,5 +15,4 @@ if __name__ == "__main__":
             with_labels=True, 
             node_size=500)
     plt.show()
-
     g.DFS(0)
