@@ -1,3 +1,4 @@
+import sys
 import networkx as nx
 import matplotlib.pyplot as plt
 from graph import graph
@@ -14,5 +15,9 @@ if __name__ == "__main__":
     nx.draw(G, node_color='lightblue', 
             with_labels=True, 
             node_size=500)
+    with open('connectedGraph.txt', 'w') as f:
+        sys.stdout = f
+        print("Number of nodes", G.number_of_nodes(), file=f )
+        print("Number of edges", G.number_of_edges(), file=f)
+        g.DFS(0)
     plt.show()
-    g.DFS(0)
