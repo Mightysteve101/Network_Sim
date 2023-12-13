@@ -19,5 +19,6 @@ if __name__ == "__main__":
         sys.stdout = f
         print("Number of nodes", G.number_of_nodes(), file=f )
         print("Number of edges", G.number_of_edges(), file=f)
-        g.DFS(0)
+        #g.DFS(0)
+        V = g.print_edges()
     plt.show()
