@@ -1,3 +1,4 @@
+from collections import defaultdict
 from itertools import combinations, groupby
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -37,6 +38,11 @@ class graph:
         """return G"""
         self.graph = G
         return self.graph
+
+    #Edge representation
+    def print_edges(self):
+        for edges in self.graph.edges():
+            print(f"{edges[0]} {edges[1]}")
 
     # A function used by DFS
     def DFSUtil(self, v, visited):
