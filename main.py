@@ -1,15 +1,19 @@
 import sys
+from collections import defaultdict
 import networkx as nx
 import matplotlib.pyplot as plt
-from graph import graph
+from graph import Graph
+from dfs_nodes import DFS_nodes
+#from dsp import Graph
 import random
 
 if __name__ == "__main__":
-    g = graph()
+    g = Graph()
     nodes = 150
     seed = random.randint(1,10)
     probability = 0.5
     G = g.random_connected_graph(nodes, probability)
+    dfs = DFS_nodes(G)
 
     # Draw the graph after DFS traversal
     nx.draw(G, node_color='lightblue', 
@@ -19,6 +23,6 @@ if __name__ == "__main__":
         sys.stdout = f
         print("Number of nodes", G.number_of_nodes(), file=f )
         print("Number of edges", G.number_of_edges(), file=f)
-        #g.DFS(0)
+        #dfs.DFS(0)
         V = g.print_edges()
     plt.show()
