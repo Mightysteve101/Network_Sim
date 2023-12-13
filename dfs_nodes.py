@@ -1,8 +1,11 @@
 """Depth first search to check the connectivity of the network"""
-
 from collections import defaultdict
 
-class graph:
+class DFS_nodes:
+
+    def __init__(self, graph):
+        self.graph = graph
+
         # A function used by DFS
     def DFSUtil(self, v, visited):
 
